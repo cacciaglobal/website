@@ -35,7 +35,8 @@
 </head>
 
 <body id="homepage" class="de_light">
-
+<!--Div where the WhatsApp will be rendered-->  
+<div id="WAButton"></div>
     <div id="wrapper">
 
         <!-- header begin -->
@@ -417,8 +418,8 @@
                         <div class="col-md-6 text-right">
                             <div class="social-icons">
                                 <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a target="_blank" href="https://x.com/cacciaglobal?s=21"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/cacciaglobal?igsh=MWc1ZzRqb2d0YzAxMw%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
                                 <a href="#"><i class="fa-brands fa-youtube"></i></a>
                             </div>
                         </div>
@@ -452,7 +453,24 @@
       $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
     });
     </script>
-
+<!--Floating WhatsApp css-->  
+<link rel="stylesheet" href="wa/floating-wpp.min.css">  
+<!--Floating WhatsApp javascript-->  
+<script type="text/javascript" src="wa/floating-wpp.min.js"></script>	
+<script type="text/javascript">  
+   $(function () {
+           $('#WAButton').floatingWhatsApp({
+               phone: '919140006599', //WhatsApp Business phone number
+               headerTitle: 'Chat with Caccia Global !', //Popup Title
+               //popupMessage: 'Hello, how can we help you?', //Popup Message
+               showPopup: true, //Enables popup display
+               buttonImage: '<img src="wa/whatsapp.svg" />', //Button Image
+               //headerColor: 'crimson', //Custom header color
+               //backgroundColor: 'crimson', //Custom background button color
+               position: "left", //Position: left | right
+           });
+       });
+</script>  		
     <!-- SWIPER SCRIPTS  -->
      <script src="js/swiper-bundle.min.js"></script>
 
